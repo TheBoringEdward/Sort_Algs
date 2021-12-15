@@ -37,10 +37,15 @@ public class Srt {
             //pos_min: position of the smallest number
             int pos_min = i;
             for(int j=1; j<n; j++){
-                if (nmb[j]<nmb[i]) {pos_min = j;}
+                if (nmb[j]<nmb[i]) {
+                    pos_min = j;
+                    System.out.print("\n "+nmb[j]+" is smaller than "+nmb[i]);
+                }
             }
+            System.out.print("\n Exchanging "+nmb[i]+" with "+nmb[pos_min]);
             exch(i,pos_min);
             show();
+            System.out.print("\n");
         }
     }
 
@@ -48,7 +53,7 @@ public class Srt {
         System.out.print("\n\n Initiating insertion sort for "+nam); //We have to figure it out by ourselves...
         for(int i=1; i<n; i++){
             for(int j=i; j>0; j--){
-                if(nmb[i]>nmb[j-1]){exch(j-1,j); show();}
+                if(nmb[i]>nmb[j-1]){exch(j-1,j); show();}   //TODO: This
 
             }
         }

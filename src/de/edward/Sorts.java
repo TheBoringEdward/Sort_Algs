@@ -19,10 +19,13 @@ public class Sorts {
 
         s1.bShow();
         s1.sel_sort();
+
+        /*
         s2.bShow();
         s2.ins_sort();
         s3.bShow();
         s3.bubl_sort();
+         */
 
         System.out.print("\n\n Debugging end");
 
