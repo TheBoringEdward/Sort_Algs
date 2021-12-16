@@ -2,14 +2,17 @@ package de.edward;
 
 public class Srt {
 
-    final private int[] nmb = {9, 5, 6, 7, 3, 1};
+    private int[] nmb = {9, 5, 6, 7, 3, 1};
                             //27543198
-    final private int n = nmb.length;
+    private int n = 0; // = nmb.length;
 
     final private String nam;
 
-    public Srt(String nm){
+    public Srt(String nm, int[] nas){
         nam = nm;
+        nmb = nas;
+        n = nmb.length;
+        //nmb[i] = nas[i]
     }
 
     //print nmb in a row
@@ -36,17 +39,17 @@ public class Srt {
             //as from the copy:
             //pos_min: position of the smallest number
             int pos_min = i;
-            for(int j=1; j<n; j++){
-                if (nmb[j]<nmb[i]) {
-                    pos_min = j;
-                    System.out.print("\n "+nmb[j]+" is smaller than "+nmb[i]);
+            for(int j=i+1; j<n; j++){
+                if (nmb[j]<nmb[pos_min]) {
+                    pos_min = j;    //TODO: Find out why this doesn't work (meaning, ask stackoverflow for help)
+                    //System.out.print("\n "+nmb[j]+" is smaller than "+nmb[i]);
                 }
             }
-            System.out.print("\n Exchanging "+nmb[i]+" with "+nmb[pos_min]);
+            //System.out.print("\n Exchanging "+nmb[i]+" with "+nmb[pos_min]);
             exch(i,pos_min);
             show();
-            System.out.print("\n");
         }
+        System.out.print("\n");
     }
 
     public void ins_sort(){
