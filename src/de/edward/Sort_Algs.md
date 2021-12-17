@@ -16,4 +16,6 @@ Checks value of second number. Compares to to previous number . If smaller, plac
 Checks value of third number. Compares to to previous number . If bigger, place before compared number.\
 If not bigger check
 
-(This ain't right. I don't know how sorting algorithms work, beside bubble sort)
+(This ain't right.)
+
+<h1>UPDATE ME!!!</h1>
